@@ -7,7 +7,7 @@ class EmployeeT {
     String name;
     float salary;
     String address;
-    
+
     EmployeeT() {}
 
     EmployeeT(int empid, String name, float salary, String address) {
@@ -55,18 +55,26 @@ public class TeacherArrObjects {
 
         for (int i = 0; i < n; i++) {
             System.out.println("Enter " + (i + 1) + " teacher details..");
+
             System.out.println("Enter teacher id (integer): ");
             tid = scT.nextInt();
+            scT.nextLine(); 
+
             System.out.println("Enter teacher name (String): ");
-            name = scT.next();
+            name = scT.nextLine();
+
             System.out.println("Enter teacher salary (float): ");
             salary = scT.nextFloat();
+            scT.nextLine();
+
             System.out.println("Enter teacher address (String): ");
-            address = scT.next();
+            address = scT.nextLine();
+
             System.out.println("Enter teacher department (String): ");
-            department = scT.next();
+            department = scT.nextLine();
+
             System.out.println("Enter teacher subject (String): ");
-            subject = scT.next();
+            subject = scT.nextLine();
 
             Teacher t = new Teacher(tid, name, salary, address, department, subject);
             teacher[i] = t;
@@ -77,5 +85,8 @@ public class TeacherArrObjects {
             x.display();
             System.out.println("\n");
         }
+
+        sc.close();
+        scT.close();
     }
 }
